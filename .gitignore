@@ -1,0 +1,42 @@
+# Ignore Django-related files and directories
+*.pyc
+__pycache__/
+*.pyo
+*.egg-info/
+db.sqlite3
+db.sqlite3-journal
+*.log
+*.pot
+*.pyc
+*.bak
+
+# Ignore virtual environment files (if you're using virtualenv or venv)
+venv/
+env/
+
+# Ignore Django's media and static files (customize as needed)
+media/
+static/
+
+# Ignore node_modules (for React)
+node_modules/
+
+
+
+# Ignore IDE and text editor files (customize as needed)
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+
+# Ignore sensitive or secret information (customize as needed)
+*.secret
+
+# Ignore generated files
+build/
+dist/
+coverage/
+*.egg
+*.egg-info/

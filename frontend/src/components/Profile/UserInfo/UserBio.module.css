@@ -1,0 +1,58 @@
+.UserBio {
+  display: flex;
+  justify-content: center;
+}
+
+.userBioInfo {
+  padding-left: 80px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+.username {
+  font-size: 25px;
+}
+.counts {
+  display: flex;
+}
+.counts p {
+  padding-right: 20px;
+}
+.counts span {
+  padding-right: 5px;
+}
+
+.fullname {
+  font-weight: bold;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+.biography {
+  font-weight: normal;
+}
+
+.story {
+  position: absolute;
+}
+
+/* .storycontainer:hover {
+  transform: scale(1.1);
+} */
+
+.storycontainer {
+  position: relative;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.profilepic {
+  position: absolute;
+  bottom: 11%;
+  left: 10%;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 50px;
+}

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: black;
+  border-radius: 5px;
+  margin-left: 610px;
+  width: 500px;
+  height: 500px;
+  overflow: auto;
+}
+
+.container ul {
+  list-style: none;
+}
+.container li {
+  cursor: pointer;
+}

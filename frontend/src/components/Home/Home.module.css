@@ -1,0 +1,126 @@
+.homediv {
+  flex-direction: column;
+  display: flex;
+  background-image: url("../../assets/images/home.jpg"); /* Adjust the path to your image */
+  background-size: 100% auto; /* Cover the entire viewport */
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100vw;
+}
+
+.homediv form {
+  max-height: 100px;
+}
+.homecontain {
+  display: flex;
+  flex-direction: column;
+}
+
+.instainput {
+  margin-top: 5px;
+  height: 25px;
+  width: 550px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  outline: none;
+}
+
+.instainput:focus {
+  border: 3px solid #00adb5;
+}
+
+.searchbtn {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+  margin-left: 10px;
+  width: 100px;
+  background-color: #00adb5;
+  color: white;
+  border: solid white 2px;
+  border-radius: 10px;
+}
+
+.searchbtn:hover {
+  cursor: pointer;
+}
+
+.searchbtn:disabled {
+  cursor: not-allowed;
+  background-color: grey;
+}
+
+.transparentbutton {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+  margin: 10px 40px 10px 30px;
+  border: 1px solid grey;
+  border-radius: 20px;
+  padding: 10px 25px 10px 25px;
+}
+
+.transparentbutton:hover {
+  color: #00adb5;
+  transform: scale(1.1);
+}
+.inputcontainer button:disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+.active {
+  color: #00adb5;
+}
+
+.inputcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 82vh;
+  margin: 0;
+  flex-grow: 1;
+  background-color: #1d1c2b;
+  overflow-x: hidden;
+}
+
+/* .searchResults {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px; /* Add a border-radius to the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

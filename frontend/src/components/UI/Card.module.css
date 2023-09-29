@@ -1,0 +1,72 @@
+.imgcontainer {
+  width: 350px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+.playicon {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pinicon {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardcontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px black;
+}
+
+.cardcontainer:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 12px black;
+}
+
+.modaldiv {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+}
+
+.modalmeta {
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  height: 100%;
+}

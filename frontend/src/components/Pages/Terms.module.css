@@ -1,0 +1,37 @@
+/* TermsOfService.css */
+
+.terms-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.terms-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.terms-content {
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.terms-container h2 {
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.terms-container p {
+  padding-left: 30px;
+  margin-top: 12px;
+}
+.terms-container ul {
+  padding-left: 60px;
+}
+.terms-container li {
+  padding-left: 10px;
+}

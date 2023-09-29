@@ -1,0 +1,81 @@
+.modalcontent {
+  margin: 0;
+  padding: 0;
+  width: 660px;
+  overflow: hidden;
+  position: relative;
+  height: 100%; /* Ensure the image container takes the entire height of the parent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalcontent img {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  max-height: 95vh;
+}
+
+.modalcontent video {
+  width: 100%;
+  height: 90vh;
+  display: block;
+  max-height: 95vh;
+}
+
+.next {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  right: 90%;
+}
+
+.indicatorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Horizontally center */
+  position: absolute;
+  top: 90%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Centering trick */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.activedot {
+  background-color: #007bff; /* Change color for the active dot */
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Horizontally center */
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%); /* Centering trick */
+}
+
+.playicon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+}
+.nostories {
+  padding: 30px 0px 30px 0px;
+}

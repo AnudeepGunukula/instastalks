@@ -1,0 +1,7 @@
+.cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-left: 300px;
+    margin-right: 200px;
+}

@@ -1,0 +1,15 @@
+.banner h1,
+h2 {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-wrap: balance;
+}
+
+.banner h2 {
+  color: gray;
+}
+
