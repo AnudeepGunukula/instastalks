@@ -42,7 +42,8 @@ function Home() {
   };
   const submitFormHandler = (event) => {
     event.preventDefault();
-    callSearch(userName);
+    navigate(`/profile/${userName}`);
+    // callSearch(userName);
   };
   // useEffect(() => {
   //   if (userName !== "") {

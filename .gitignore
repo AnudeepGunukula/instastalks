@@ -31,8 +31,6 @@ node_modules/
 .DS_Store
 
 
-# Ignore sensitive or secret information (customize as needed)
-*.secret
 
 # Ignore generated files
 build/

@@ -41,7 +41,9 @@ def GetSession():
     try:
         with open('session.pkl', 'rb') as f:
            session = pickle.load(f)
-        return session
+        csrftoken=session.cookies.get('csrftoken')
+        sessionid=session.cookies.get('sessionid')
+        return (csrftoken,sessionid)
     except FileNotFoundError:
-        return login(need='session')
+        login(need='session')
 

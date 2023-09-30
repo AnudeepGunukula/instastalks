@@ -8,6 +8,7 @@ import PostReelsNav from "./Posts/PostReelsNav";
 import { baseurl } from "../../Helpers/Strings";
 import { useDispatch } from "react-redux";
 import { userInfoActions } from "../../store/userInfoSliceReducer";
+import classes  from "./Profile.module.css";
 function Profile() {
   const data = useLoaderData();
   const dispatch = useDispatch(userInfoActions);
@@ -17,8 +18,10 @@ function Profile() {
 
   return (
     <>
-      <UserBio userData={data} />
-      <PostReelsNav userData={data} />
+      <div class={classes.bgcol}>
+        <UserBio userData={data} />
+        <PostReelsNav userData={data} />
+      </div>
     </>
   );
 }

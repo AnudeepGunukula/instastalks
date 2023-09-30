@@ -7,6 +7,7 @@ from instatoolbox.api.Helpers.Strings import baseurl,graphqlpath,insta_headers
 from instatoolbox.api.Helpers.SessionUtility import login,GetSession
 from instatoolbox.api.Helpers.UserUtility import GetUserProfile
 from instatoolbox.api.Helpers.UserUtility import ParseUserAndPosts, ParseUserEdgePosts
+import requests
 import json
 
 class User(APIView):
@@ -37,8 +38,10 @@ class User(APIView):
                 variables=quote(variables)
                 
                 url=baseurl+graphqlpath+variables
-                session=GetSession()
-                re=session.get(url,headers=insta_headers)
+                csrftoken,sessionid=GetSession()
+                cookies={'csrftoken':csrftoken,'sessionid':sessionid}
+                insta_headers['X-CSRFToken']=csrftoken
+                re=requests.get(url,headers=insta_headers,cookies=cookies)
                 profilejson=json.loads(re.text)
                 edges=profilejson['data']['user']['edge_owner_to_timeline_media']['edges']
                 endcursor=profilejson['data']['user']['edge_owner_to_timeline_media']['page_info']['end_cursor']

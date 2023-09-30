@@ -1,14 +1,17 @@
 from instatoolbox.api.Helpers.SessionUtility import GetSession
-from instatoolbox.api.Helpers.Strings import stories_url
+from instatoolbox.api.Helpers.Strings import stories_url,insta_headers
+import requests
 
 def GetUserStories(userid):
 
     url=stories_url
     url+=userid
-    session=GetSession()
-    res=session.get(url)
+    csrftoken,sessionid=GetSession()
+    cookies={'csrftoken':csrftoken,'sessionid':sessionid}
+    insta_headers['X-CSRFToken']=csrftoken
+    re=requests.get(url,headers=insta_headers,cookies=cookies)
 
-    return res
+    return re
 
 
 def GetStoriesFromRes(res):

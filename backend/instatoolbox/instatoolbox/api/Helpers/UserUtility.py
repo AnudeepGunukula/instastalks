@@ -1,7 +1,8 @@
 
 from instatoolbox.api.Helpers.SessionUtility import GetSession
 from instatoolbox.api.Models.Models import User,Post
-from instatoolbox.api.Helpers.Strings import baseurl,profilepathurl
+from instatoolbox.api.Helpers.Strings import baseurl,profilepathurl,insta_headers
+import requests
 
 def ParseUserEdgePosts(edges):
          userposts=[]
@@ -60,6 +61,8 @@ def ParseUserAndPosts(profilejson):
 
 def GetUserProfile(username):
        url=baseurl+profilepathurl+username
-       session=GetSession()
-       re=session.get(url)
+       csrftoken,sessionid=GetSession()
+       cookies={'csrftoken':csrftoken,'sessionid':sessionid}
+       insta_headers['X-CSRFToken']=csrftoken
+       re=requests.get(url,headers=insta_headers,cookies=cookies)
        return re

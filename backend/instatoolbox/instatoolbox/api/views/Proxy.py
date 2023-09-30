@@ -3,14 +3,18 @@ from django.http import HttpResponse
 from rest_framework.status import HTTP_200_OK,HTTP_400_BAD_REQUEST
 from rest_framework.response import Response
 from instatoolbox.api.Helpers.SessionUtility import login,GetSession
+import requests
+from instatoolbox.api.Helpers.Strings import insta_headers
 
 class Proxy(APIView):
     def get(self,request,pk):
         fullpath=request.get_full_path()
         url=fullpath.split('proxy/')[1]
         try:
-            session=GetSession()
-            res=session.get(url)
+            csrftoken,sessionid=GetSession()
+            cookies={'csrftoken':csrftoken,'sessionid':sessionid}
+            insta_headers['X-CSRFToken']=csrftoken
+            res=requests.get(url,headers=insta_headers,cookies=cookies)
             if res.status_code == 200:
                     content_type = res.headers.get('content-type')
                     response_headers = {

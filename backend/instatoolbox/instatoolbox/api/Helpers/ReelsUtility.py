@@ -14,8 +14,10 @@ def GetReelsForProfile(username,reqbody):
             }
        if  'max_id' in reqbody.keys():
             jbody['max_id']=reqbody['max_id']
-       session=GetSession()
-       response=session.post(url,data=jbody).text
+       csrftoken,sessionid=GetSession()
+       cookies={'csrftoken':csrftoken,'sessionid':sessionid}
+       insta_headers['X-CSRFToken']=csrftoken
+       response=requests.post(url,data=jbody,headers=insta_headers,cookies=cookies).text
        reelbody=json.loads(response)
        if 'max_id' in reelbody['paging_info']:
            endcursor=reelbody['paging_info']['max_id']
